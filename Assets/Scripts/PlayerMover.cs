@@ -24,10 +24,14 @@ public class PlayerMover : MonoBehaviour
             rb.AddForce(new Vector3(0f, _jump, 0f), ForceMode.Impulse);
             cubeIsOnTheGround = false;
         }
-
-        
-
-        
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            transform.Translate(0f, _shift, 0f);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            transform.Translate(0f, -_shift, 0f);  
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

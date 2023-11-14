@@ -8,7 +8,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Opening door!");
+        Destroy(gameObject);
         return true;
     }
 }
